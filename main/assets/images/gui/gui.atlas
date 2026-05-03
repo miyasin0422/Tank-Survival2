@@ -1,0 +1,60 @@
+images {
+  image: "/main/assets/map/heal.png"
+}
+images {
+  image: "/main/assets/map/poison.png"
+}
+images {
+  image: "/main/assets/map/tp.png"
+}
+images {
+  image: "/main/assets/map/tp2.png"
+}
+images {
+  image: "/main/assets/map/tullet.png"
+}
+images {
+  image: "/main/assets/images/tank/bottom_blue.png"
+}
+images {
+  image: "/main/assets/images/tank/upper_blue.png"
+}
+images {
+  image: "/main/assets/images/gui/wall.png"
+}
+images {
+  image: "/main/assets/images/gui/floor.png"
+}
+images {
+  image: "/main/assets/images/title.png"
+}
+images {
+  image: "/main/assets/images/tank2/power_tank_upper.png"
+}
+images {
+  image: "/main/assets/images/tank2/power_tank_bottom.png"
+}
+images {
+  image: "/main/assets/images/tank2/speed_tank_upper.png"
+}
+images {
+  image: "/main/assets/images/tank2/speed_tank_bottom.png"
+}
+images {
+  image: "/main/assets/images/gui/wasd.png"
+}
+images {
+  image: "/main/assets/images/gui/mouse.png"
+}
+images {
+  image: "/main/assets/images/title2.png"
+}
+images {
+  image: "/main/assets/map/speed_up.png"
+}
+images {
+  image: "/main/assets/map/power_up.png"
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0

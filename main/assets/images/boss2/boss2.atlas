@@ -1,0 +1,15 @@
+images {
+  image: "/main/assets/images/boss2/boss_bottom1.png"
+}
+images {
+  image: "/main/assets/images/boss2/boss_bottom2.png"
+}
+images {
+  image: "/main/assets/images/boss2/boss_upper_blue.png"
+}
+images {
+  image: "/main/assets/images/boss2/boss_upper_red.png"
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0

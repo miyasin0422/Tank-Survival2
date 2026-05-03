@@ -1,0 +1,24 @@
+images {
+  image: "/main/assets/map/heal.png"
+}
+images {
+  image: "/main/assets/map/poison.png"
+}
+images {
+  image: "/main/assets/map/tp.png"
+}
+images {
+  image: "/main/assets/map/tp2.png"
+}
+images {
+  image: "/main/assets/map/tullet.png"
+}
+images {
+  image: "/main/assets/map/power_up.png"
+}
+images {
+  image: "/main/assets/map/speed_up.png"
+}
+margin: 0
+extrude_borders: 2
+inner_padding: 0

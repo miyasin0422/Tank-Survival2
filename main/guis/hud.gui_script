@@ -1,0 +1,143 @@
+local power_bar
+
+function init(self)
+  hp_box = gui.get_node("hp_box")
+  gui.set_color(hp_box, vmath.vector3(0, 1, 0))
+  hp_number = gui.get_node("hp_number")
+  level_name = gui.get_node("level_name")
+  power_bar = gui.get_node("power_bar")
+  power_item = gui.get_node("power_item")
+  power_cnt = gui.get_node("power_cnt")
+  speed_bar = gui.get_node("speed_bar")
+  speed_item = gui.get_node("speed_item")
+  speed_text = gui.get_node("speed_text")
+  wasd = gui.get_node("wasd")
+  speed_rule = gui.get_node("speed_rule")
+  power_rule = gui.get_node("power_rule")
+  gui.set_color(power_item, vmath.vector4(gui.get_color(power_item).x, gui.get_color(power_item).y, gui.get_color(power_item).z, 0))
+  gui.set_color(speed_item, vmath.vector4(gui.get_color(speed_item).x, gui.get_color(speed_item).y, gui.get_color(speed_item).z, 0))
+  gui.set_color(wasd, vmath.vector4(gui.get_color(wasd).x, gui.get_color(wasd).y, gui.get_color(wasd).z, 0))
+  gui.set_color(speed_rule, vmath.vector4(gui.get_color(speed_rule).x, gui.get_color(speed_rule).y, gui.get_color(speed_rule).z, 0))
+  gui.set_color(power_rule, vmath.vector4(gui.get_color(power_rule).x, gui.get_color(power_rule).y, gui.get_color(power_rule).z, 0))
+end
+
+function final(self)
+	-- Add finalization code here
+	-- Remove this function if not needed
+end
+
+function update(self, dt)
+  if player_flag then
+    --rule
+    if level == 1 then
+      gui.set_color(wasd, vmath.vector4(gui.get_color(wasd).x, gui.get_color(wasd).y, gui.get_color(wasd).z, 1))
+      if player_type == 1 then
+        gui.set_color(speed_rule, vmath.vector4(gui.get_color(speed_rule).x, gui.get_color(speed_rule).y, gui.get_color(speed_rule).z, 1))
+        gui.set_color(power_rule, vmath.vector4(gui.get_color(power_rule).x, gui.get_color(power_rule).y, gui.get_color(power_rule).z, 0))
+      elseif player_type == 3 then
+        gui.set_color(power_rule, vmath.vector4(gui.get_color(power_rule).x, gui.get_color(power_rule).y, gui.get_color(power_rule).z, 1))
+        gui.set_color(speed_rule, vmath.vector4(gui.get_color(speed_rule).x, gui.get_color(speed_rule).y, gui.get_color(speed_rule).z, 0))
+      else
+        gui.set_color(speed_rule, vmath.vector4(gui.get_color(speed_rule).x, gui.get_color(speed_rule).y, gui.get_color(speed_rule).z, 0))
+        gui.set_color(power_rule, vmath.vector4(gui.get_color(power_rule).x, gui.get_color(power_rule).y, gui.get_color(power_rule).z, 0))
+      end
+    else
+      gui.set_color(wasd, vmath.vector4(gui.get_color(wasd).x, gui.get_color(wasd).y, gui.get_color(wasd).z, 0))
+      gui.set_color(speed_rule, vmath.vector4(gui.get_color(speed_rule).x, gui.get_color(speed_rule).y, gui.get_color(speed_rule).z, 0))
+      gui.set_color(power_rule, vmath.vector4(gui.get_color(power_rule).x, gui.get_color(power_rule).y, gui.get_color(power_rule).z, 0))
+    end
+
+    if player_type == 2 then
+      --balance
+      if not (power_count == nil) then
+        gui.set_text(power_cnt, "強化弾:"..power_count)
+      end
+      gui.set_color(power_bar, vmath.vector4(gui.get_color(power_bar).x, gui.get_color(power_bar).y, gui.get_color(power_bar).z, 0))
+      gui.set_color(speed_bar, vmath.vector4(gui.get_color(speed_bar).x, gui.get_color(speed_bar).y, gui.get_color(speed_bar).z, 0))
+      if power_flag then
+        gui.set_color(power_item, vmath.vector4(gui.get_color(power_item).x, gui.get_color(power_item).y, gui.get_color(power_item).z, 0.6))
+        gui.set_color(power_cnt, vmath.vector4(gui.get_color(power_cnt).x, gui.get_color(power_cnt).y, gui.get_color(power_cnt).z, 1))
+      else
+        gui.set_color(power_item, vmath.vector4(gui.get_color(power_item).x, gui.get_color(power_item).y, gui.get_color(power_item).z, 0))
+        gui.set_color(power_cnt, vmath.vector4(gui.get_color(power_cnt).x, gui.get_color(power_cnt).y, gui.get_color(power_cnt).z, 0))
+      end
+
+      if speed_flag then
+        gui.set_color(speed_item, vmath.vector4(gui.get_color(speed_item).x, gui.get_color(speed_item).y, gui.get_color(speed_item).z, 0.6))
+        gui.set_color(speed_text, vmath.vector4(gui.get_color(speed_text).x, gui.get_color(speed_text).y, gui.get_color(speed_text).z, 1))
+      else
+        gui.set_color(speed_item, vmath.vector4(gui.get_color(speed_item).x, gui.get_color(speed_item).y, gui.get_color(speed_item).z, 0))
+        gui.set_color(speed_text, vmath.vector4(gui.get_color(speed_text).x, gui.get_color(speed_text).y, gui.get_color(speed_text).z, 0))
+      end
+
+      --speed
+    elseif player_type == 1 then
+      gui.set_color(power_bar, vmath.vector4(gui.get_color(power_bar).x, gui.get_color(power_bar).y, gui.get_color(power_bar).z, 0))
+      gui.set_color(speed_item, vmath.vector4(gui.get_color(speed_item).x, gui.get_color(speed_item).y, gui.get_color(speed_item).z, 0))
+      gui.set_color(power_item, vmath.vector4(gui.get_color(power_item).x, gui.get_color(power_item).y, gui.get_color(power_item).z, 0))
+      gui.set_color(power_cnt, vmath.vector4(gui.get_color(power_cnt).x, gui.get_color(power_cnt).y, gui.get_color(power_cnt).z, 0))
+      gui.set_color(speed_text, vmath.vector4(gui.get_color(speed_text).x, gui.get_color(speed_text).y, gui.get_color(speed_text).z, 0))
+      if speed_gage then
+        gui.set_size(speed_bar, vmath.vector3(speed_gage * 500 / 150, 30, 1))
+        gui.set_color(speed_bar, vmath.vector4(gui.get_color(speed_bar).x, gui.get_color(speed_bar).y, gui.get_color(speed_bar).z, 0.8))
+      end
+
+      --power
+    elseif player_type == 3 then
+      gui.set_color(speed_bar, vmath.vector4(gui.get_color(speed_bar).x, gui.get_color(speed_bar).y, gui.get_color(speed_bar).z, 0))
+      gui.set_color(speed_item, vmath.vector4(gui.get_color(speed_item).x, gui.get_color(speed_item).y, gui.get_color(speed_item).z, 0))
+      gui.set_color(power_item, vmath.vector4(gui.get_color(power_item).x, gui.get_color(power_item).y, gui.get_color(power_item).z, 0))
+      gui.set_color(power_cnt, vmath.vector4(gui.get_color(power_cnt).x, gui.get_color(power_cnt).y, gui.get_color(power_cnt).z, 0))
+      gui.set_color(speed_text, vmath.vector4(gui.get_color(speed_text).x, gui.get_color(speed_text).y, gui.get_color(speed_text).z, 0))
+      if charge_gage then
+        gui.set_size(power_bar, vmath.vector3(charge_gage * 500 / 150, 30, 1))
+        gui.set_color(power_bar, vmath.vector4(gui.get_color(power_bar).x, gui.get_color(power_bar).y, gui.get_color(power_bar).z, 0.8))
+      end
+
+      --power gage
+      if not charge_gage or charge_gage == 0 then
+      elseif charge_gage >= 1 and charge_gage < 50 then
+        gui.set_color(power_bar, vmath.vector3(1, 1, 0))
+      elseif charge_gage >= 50 and charge_gage < 150 then
+        gui.set_color(power_bar, vmath.vector3(1, 0.5, 0))
+      elseif charge_gage >= 150 then
+        gui.set_color(power_bar, vmath.vector3(1, 0, 0))
+      end
+
+    end
+    if player_type == 2 then
+      gui.set_size(hp_box, vmath.vector3(player_hp * 60, 40, 1))
+      gui.set_text(hp_number, player_hp)
+      gui.set_text(level_name, "level "..level)
+    else
+      gui.set_size(hp_box, vmath.vector3(player_hp * 75, 40, 1))
+      gui.set_text(hp_number, player_hp)
+      gui.set_text(level_name, "level "..level)
+    end
+  else
+    msg.post(".", "disable")
+  end
+
+  --hp color
+  if player_hp == nil then
+    return
+  else
+    if player_type == 2 then
+      if player_hp <= 2 then
+        gui.set_color(hp_box, vmath.vector3(1, 0, 0))
+      elseif player_hp <= 5 then
+        gui.set_color(hp_box, vmath.vector3(1, 1, 0))
+      else
+        gui.set_color(hp_box, vmath.vector3(0, 1, 0))
+      end
+    else
+      if player_hp <= 2 then
+        gui.set_color(hp_box, vmath.vector3(1, 0, 0))
+      elseif player_hp <= 4 then
+        gui.set_color(hp_box, vmath.vector3(1, 1, 0))
+      else
+        gui.set_color(hp_box, vmath.vector3(0, 1, 0))
+      end
+    end
+  end
+end

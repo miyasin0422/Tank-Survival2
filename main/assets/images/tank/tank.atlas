@@ -1,0 +1,54 @@
+images {
+  image: "/main/assets/images/tank/bottom_blue.png"
+}
+images {
+  image: "/main/assets/images/tank/bottom_green.png"
+}
+images {
+  image: "/main/assets/images/tank/bottom_red.png"
+}
+images {
+  image: "/main/assets/images/tank/bottom_yellow.png"
+}
+images {
+  image: "/main/assets/images/tank/upper_blue.png"
+}
+images {
+  image: "/main/assets/images/tank/upper_green.png"
+}
+images {
+  image: "/main/assets/images/tank/upper_red.png"
+}
+images {
+  image: "/main/assets/images/tank/upper_yellow.png"
+}
+images {
+  image: "/main/assets/images/tank/bullet.png"
+}
+images {
+  image: "/main/assets/images/tank/bullet2.png"
+}
+images {
+  image: "/main/assets/images/tank/hp_bar.png"
+}
+images {
+  image: "/main/assets/images/tank/empty_bar.png"
+}
+images {
+  image: "/main/assets/images/cursor.png"
+}
+images {
+  image: "/main/assets/images/tank/line.png"
+}
+images {
+  image: "/main/assets/images/tank2/power_tank_upper.png"
+}
+images {
+  image: "/main/assets/images/tank/bullet3.png"
+}
+images {
+  image: "/main/assets/images/tank/speed_bullet.png"
+}
+margin: 0
+extrude_borders: 1
+inner_padding: 0
