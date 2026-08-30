@@ -116,12 +116,10 @@ function update(self, dt)
     end
   else
     msg.post(".", "disable")
+    return
   end
 
   --hp color
-  if player_hp == nil then
-    return
-  else
     if player_type == 2 then
       if player_hp <= 2 then
         gui.set_color(hp_box, vmath.vector3(1, 0, 0))
@@ -139,5 +137,4 @@ function update(self, dt)
         gui.set_color(hp_box, vmath.vector3(0, 1, 0))
       end
     end
-  end
 end

@@ -75,20 +75,20 @@ function on_input(self, action_id, action)
       else
         msg.post("loader", "next_level")
       end
-      gui.cancel_animation(gui.get_node("box"), "position.x")
+      gui.cancel_animations(gui.get_node("box"), "position.x")
       gui.set_position(gui.get_node("box"), vmath.vector3(1920, 360, 0))
     elseif gui.pick_node(gui.get_node("left_button"), action.x, action.y) and gui.get_color(left_button).w == 1 then
       sound.stop("#cancel")
       sound.play("#cancel")
       msg.post("main:/loader", "gameover")
-      gui.cancel_animation(gui.get_node("box"), "position.x")
+      gui.cancel_animations(gui.get_node("box"), "position.x")
       gui.set_position(gui.get_node("box"), vmath.vector3(1920, 360, 0))
       msg_flag = false
     elseif gui.pick_node(gui.get_node("center_button"), action.x, action.y) and gui.get_color(center_button).w == 1 then
       sound.stop("#cancel")
       sound.play("#cancel")
       msg.post("main:/loader", "gameover")
-      gui.cancel_animation(gui.get_node("box"), "position.x")
+      gui.cancel_animations(gui.get_node("box"), "position.x")
       gui.set_position(gui.get_node("box"), vmath.vector3(1920, 360, 0))
       msg_flag = false
     elseif gui.pick_node(gui.get_node("start_button"), action.x, action.y) and gui.get_color(game_start).w == 1 then
@@ -104,7 +104,7 @@ function on_input(self, action_id, action)
     gui.set_color(game_start, vmath.vector4(gui.get_color(game_start).x, gui.get_color(game_start).y, gui.get_color(game_start).z, 0))
   elseif action_id == hash("quit") and action.pressed then
     gui.set_color(game_start, vmath.vector4(gui.get_color(game_start).x, gui.get_color(game_start).y, gui.get_color(game_start).z, 0))
-    gui.cancel_animation(gui.get_node("box"), "position.x")
+    gui.cancel_animations(gui.get_node("box"), "position.x")
     gui.set_position(gui.get_node("box"), vmath.vector3(1920, 360, 0))
   end
 end

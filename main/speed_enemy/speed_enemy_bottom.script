@@ -38,7 +38,7 @@ function update(self, dt)
 		self.dt = 0
 	end
   local pos = go.get_position()
-  pos = pos + self.dir * 3.5
+  pos = pos + self.dir * 300 * dt
   if move_flag then
     go.set_position(pos)
   end

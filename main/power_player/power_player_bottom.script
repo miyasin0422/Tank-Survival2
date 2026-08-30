@@ -39,7 +39,7 @@ end
 function place_heal()
  	if not (#heal_position == 0) then
 		pos = heal_position[math.random(#heal_position)]
-		factory.create("#heal", vmath.vector3(pos[1], pos[2], -0.1), vmath.quat_rotation_z(get_angle(vmath.vector3(0, 1, 0))), properties, scale)
+		factory.create("#heal", vmath.vector3(pos[1], pos[2], -0.1), vmath.quat_rotation_z(get_angle(vmath.vector3(0, 1, 0))))
 	end
 end
 
@@ -136,7 +136,9 @@ function player_death(self)
 		msg.post("main:/msg_gui", "gameover")
 		go.delete(self.upper_id)
 		go.delete(self.cursor_id)
-		go.delete(self.line_id)
+		if self.line_id then
+			go.delete(self.line_id)
+		end
 		go.delete(self.counter_id)
 		go.delete()
 		cursor_flag = false

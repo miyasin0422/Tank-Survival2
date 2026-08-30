@@ -9,8 +9,8 @@ function init(self)
   self.restart_flag = false
   --windowの設定
 	defos.disable_window_resize()
-	defos.disable_minimize_button(festival)
-	defos.disable_maximize_button(festival)
+	defos.disable_minimize_button()
+	defos.disable_maximize_button()
 	defos.set_always_on_top(festival)
 	display = defos.get_displays()
 	display_id = defos.get_current_display_id()
@@ -39,7 +39,10 @@ function on_message(self, message_id, message, sender)
     if not (level == 0) then
       msg.post("#level"..level, "unload")
     end
+    player_flag = false
+    msg_flag = false
     level = 0
+    msg.post("main:/hud", "disable")
     msg.post("main:/go", "enable")
     click_flag = false
   elseif message_id == hash("restart") then
@@ -61,17 +64,20 @@ function on_message(self, message_id, message, sender)
       self.restart_flag = false
     end
     if level >= 10 then
+      player_flag = false
+      msg_flag = false
       level = 0
+      msg.post("main:/hud", "disable")      
       msg.post("main:/go", "enable")
     else
       level = level + 1
       if level == 0 then return end      --level = 10
       msg.post("#level"..level, "load")
     end
-    enemy_count = nil
-    boss_count = nil
+    enemy_count = 0
+    boss_count = 0
     player_count = nil
-    charge_gage = nil
+    charge_gage = 0
     click_flag = false
     msg.post("msg_gui", "next_level")
     msg.post("msg_gui", "gamestart")
@@ -81,8 +87,8 @@ end
 function on_input(self, action_id, action)
   if action_id == hash("fullscreen") and action.pressed then
     defos.toggle_fullscreen()
-  	defos.disable_minimize_button(festival)
-  	defos.disable_maximize_button(festival)
+  	defos.disable_minimize_button()
+  	defos.disable_maximize_button()
   	defos.set_always_on_top(festival)
 
   elseif action_id == hash("quit") and action.pressed then
