@@ -40,10 +40,9 @@ Defoldを使用して個人制作した、2D戦車シューティングゲーム
 
 ゲームの内容を約1分で紹介しています。
 
-[![TankSurvival2 紹介動画](画像URL)](YouTubeのURL)
+[![TankSurvival2 紹介動画](https://img.youtube.com/vi/KWfhvoHm3mU/maxresdefault.jpg)](https://youtu.be/KWfhvoHm3mU)
 
-YouTube：  
-https://www.youtube.com/XXXXXXXX
+[YouTubeで紹介動画を見る](https://youtu.be/KWfhvoHm3mU)
 
 ---
 
@@ -71,24 +70,21 @@ https://www.youtube.com/XXXXXXXX
 
 高速な移動を活かして敵の攻撃を避けながら戦うタイプです。
 
-![スピードタイプ](<img width="356" height="356" alt="スクリーンショット 2026-08-31 063410" src="https://github.com/user-attachments/assets/d7ec7d7f-7ed3-4510-bb7f-8c2c2a65fd88" />
-)
+<img width="356" alt="スピードタイプ" src="https://github.com/user-attachments/assets/d7ec7d7f-7ed3-4510-bb7f-8c2c2a65fd88" />
 
 #### バランスタイプ
 
 基本性能のバランスが良く、
 ステージ中に取得できる強化要素を利用して戦うタイプです。
 
-![バランスタイプ](<img width="299" height="299" alt="1スクリーンショット 2026-08-31 063410" src="https://github.com/user-attachments/assets/a682ff44-a3ac-41ea-8dfe-26e36f1ce7f8" />
-)
+<img width="299" alt="バランスタイプ" src="https://github.com/user-attachments/assets/a682ff44-a3ac-41ea-8dfe-26e36f1ce7f8" />
 
 #### パワータイプ
 
 攻撃をチャージすることで、
 通常より強力な攻撃を行えるタイプです。
 
-![パワータイプ](<img width="315" height="315" alt="ス1クリーンショット 2026-08-31 063410" src="https://github.com/user-attachments/assets/a9610524-95cf-4bd5-bded-731ba5505283" />
-)
+<img width="315" alt="パワータイプ" src="https://github.com/user-attachments/assets/a9610524-95cf-4bd5-bded-731ba5505283" />
 
 ---
 
@@ -99,8 +95,7 @@ https://www.youtube.com/XXXXXXXX
 
 また、敵の移動方向や壁との衝突処理などもLuaで実装しています。
 
-![敵との戦闘](<img width="612" height="410" alt="スクリーンショット 2026-08-31 064114" src="https://github.com/user-attachments/assets/51d57207-3c78-41a6-8ec3-4bb427a54901" />
-)
+<img width="612" alt="敵との戦闘" src="https://github.com/user-attachments/assets/51d57207-3c78-41a6-8ec3-4bb427a54901" />
 
 ---
 
@@ -109,10 +104,9 @@ https://www.youtube.com/XXXXXXXX
 HPだけでなく、選択した機体に応じて
 チャージゲージや強化状態など必要な情報を表示するHUDを実装しました。
 
-![HUD](<img width="786" height="422" alt="スクリーンショット 2026-08-31 063528" src="https://github.com/user-attachments/assets/e17a5f19-3071-4585-a5b1-db347a29501c" />
-)
-![HUD](<img width="787" height="366" alt="スクリーンショット 2026-08-31 063544" src="https://github.com/user-attachments/assets/e4ffc537-8630-4f88-82bc-a77d6f5a105f" />
-)
+<img width="786" alt="HUD" src="https://github.com/user-attachments/assets/e17a5f19-3071-4585-a5b1-db347a29501c" />
+
+<img width="787" alt="HUD" src="https://github.com/user-attachments/assets/e4ffc537-8630-4f88-82bc-a77d6f5a105f" />
 
 ---
 
@@ -122,18 +116,19 @@ HPだけでなく、選択した機体に応じて
 
 itch.ioで公開しています。
 
-▶ **Play on itch.io**  
-https://miyasin0422.itch.io/tank-survival2
+▶ [ブラウザでTankSurvival2をプレイ](https://miyasin0422.itch.io/tank-survival2)
 
-ブラウザ上ですぐにプレイできます。
+インストール不要でそのままプレイできます。
 
 ### Windows版
 
 GitHub ReleasesからZIPファイルをダウンロードできます。
 
+▶ [Windows版をダウンロード](https://github.com/miyasin0422/Tank-Survival2/releases)
+
 1. ZIPファイルをダウンロード
 2. ファイルを解凍
-3. TankSurvival2.exe を起動
+3. `TankSurvival2.exe` を起動
 
 ---
 
@@ -141,15 +136,15 @@ GitHub ReleasesからZIPファイルをダウンロードできます。
 
 ### GitHub
 
-https://github.com/miyasin0422
+[GitHub - miyasin0422](https://github.com/miyasin0422)
 
 ### X
 
-https://x.com/miyashin_lab
+[X - @miyashin_lab](https://x.com/miyashin_lab)
 
 ### YouTube
 
-https://www.youtube.com/@miyashin_games
+[YouTube - miyashin_games](https://www.youtube.com/@miyashin_games)
 
 ---
 
