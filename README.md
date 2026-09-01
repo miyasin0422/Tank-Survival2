@@ -40,9 +40,9 @@ Defoldを使用して個人制作した、2D戦車シューティングゲーム
 
 ゲームの内容を約1分で紹介しています。
 
-[![TankSurvival2 紹介動画](https://img.youtube.com/vi/KWfhvoHm3mU/maxresdefault.jpg)](https://youtu.be/KWfhvoHm3mU)
+[![TankSurvival2 紹介動画](https://img.youtube.com/vi/vZmOgyaHwis/maxresdefault.jpg)](https://youtu.be/vZmOgyaHwis)
 
-[YouTubeで紹介動画を見る](https://youtu.be/KWfhvoHm3mU)
+[YouTubeで紹介動画を見る](https://youtu.be/vZmOgyaHwis)
 
 ---
 
